@@ -37,11 +37,12 @@ function Register() {
             if (data.success) {
                 window.location.href = 'https://www.linux.org/';
             } else {
+                console.log(data.success);
                 console.log('Tên người dùng hoặc mật khẩu không chính xác');
             }
         })
         .catch((error) => {
-            setError('Tên người dùng hoặc mật khẩu không chính xác');
+            setError(error);
         });
     }
     return (
